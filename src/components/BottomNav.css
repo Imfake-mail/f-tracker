@@ -1,0 +1,59 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: var(--nav-height);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.625rem;
+  font-weight: 500;
+  gap: 3px;
+  padding: 8px 0;
+  flex: 1;
+  transition: color 0.15s ease;
+}
+
+.nav-item.active {
+  color: var(--accent);
+}
+
+.nav-item span {
+  letter-spacing: 0.02em;
+}
+
+/* Center Add Button */
+.add-btn .add-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: -12px;
+  transition: transform 0.15s ease;
+}
+.add-btn.active .add-icon-wrapper {
+  transform: scale(1.05);
+}
+.add-btn span {
+  margin-top: 2px;
+}
